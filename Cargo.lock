@@ -147,6 +147,7 @@ dependencies = [
  "anyhow",
  "clap",
  "ctrlc",
+ "libc",
  "shellwords",
 ]
 

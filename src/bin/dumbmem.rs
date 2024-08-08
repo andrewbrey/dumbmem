@@ -23,6 +23,8 @@ fn main() -> anyhow::Result<()> {
     use std::sync::Arc;
     use std::sync::Mutex;
 
+    use dumbmem::memory_stats;
+
     let cli = Cli::parse();
 
     let mut parsed_command = shellwords::split(cli.command.as_str())?;

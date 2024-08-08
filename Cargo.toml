@@ -9,3 +9,10 @@ anyhow = "1.0.86"
 clap = { version = "4.4.14", features = ["cargo", "derive", "env"] }
 ctrlc = "3.4.4"
 shellwords = "1.1.0"
+
+[target.'cfg(any(target_os = "linux", target_os = "android", target_os = "macos", target_os = "ios", target_os = "freebsd"))'.dependencies]
+libc = "0.2"
+
+[features]
+# Always use the faster but less accurate /proc/self/statm statistics on Linux.
+always_use_statm = []
