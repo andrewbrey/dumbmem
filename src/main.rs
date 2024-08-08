@@ -17,7 +17,7 @@ struct Cli {
     out_file: Option<PathBuf>,
 }
 
-#[cfg(target_family = "unix")]
+#[cfg(target_os = "linux")]
 fn main() -> anyhow::Result<()> {
     use std::process::Child;
     use std::sync::Arc;
@@ -76,7 +76,7 @@ fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-#[cfg(not(target_family = "unix"))]
+#[cfg(not(target_os = "linux"))]
 fn main() -> anyhow::Result<()> {
-    anyhow::bail!("dumbmem is unix only")
+    anyhow::bail!("dumbmem is linux only")
 }
