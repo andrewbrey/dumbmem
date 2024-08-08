@@ -1,0 +1,8 @@
+[package]
+name = "dumbmem"
+version = "0.1.0"
+description = "A dumb tool to collect dumb memory consumption numbers over time"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.4.14", features = ["cargo", "derive", "env"] }
