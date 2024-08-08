@@ -6,6 +6,7 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.86"
+chrono = "0.4.38"
 clap = { version = "4.4.14", features = ["cargo", "derive", "env"] }
 ctrlc = "3.4.4"
 shellwords = "1.1.0"

@@ -28,9 +28,9 @@ pub enum Proc {
     Other(usize),
 }
 
-impl From<usize> for Proc {
-    fn from(value: usize) -> Self {
-        Self::Other(value)
+impl From<u32> for Proc {
+    fn from(value: u32) -> Self {
+        Self::Other(value as usize)
     }
 }
 
