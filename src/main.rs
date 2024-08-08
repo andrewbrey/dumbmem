@@ -32,7 +32,7 @@ fn main() -> anyhow::Result<()> {
     }
 
     let program = parsed_command.remove(0);
-    let args = parsed_command;
+    let args = parsed_command; // Warning - not doing *any* escaping or sanitization!
 
     let child: Arc<Mutex<Option<Child>>> = Arc::new(Mutex::new(None));
     let child_ref = Arc::clone(&child);
