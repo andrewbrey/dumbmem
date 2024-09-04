@@ -15,6 +15,10 @@ struct Cli {
     /// How frequently, in seconds, should memory usage be recorded
     #[arg(short = 'n', long, default_value_t = 60)]
     interval: u64,
+
+    /// Additional commands to run before the primary command (repeatable)
+    #[arg(short, long = "sidecar", value_name = "SIDECAR", action = clap::ArgAction::Append)]
+    sidecars: Vec<String>,
 }
 
 #[cfg(target_os = "linux")]
