@@ -112,7 +112,7 @@ fn main() -> anyhow::Result<()> {
                 if let Some(stats) = memory_stats(id) {
                     let mem_kb = stats.physical_mem / 1024;
                     let mem_mb = mem_kb / 1024;
-                    let when = chrono::Local::now().format("%H:%M:%S");
+                    let when = chrono::Local::now().format("%Y-%m-%dT%H:%M:%S");
                     let stat_line = format!("{when}\t{mem_mb}\n");
 
                     out_file.write_all(stat_line.as_bytes())?;
